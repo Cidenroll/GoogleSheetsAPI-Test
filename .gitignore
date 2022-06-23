@@ -14,4 +14,4 @@
 ./.env
 ./.env.test
 secrets/credentials.json
-
+/logs
