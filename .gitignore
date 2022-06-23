@@ -12,3 +12,6 @@
 /vendor
 /coverage.html
 secrets/credentials.json
+/.env
+/logs/xdebug.log
+
