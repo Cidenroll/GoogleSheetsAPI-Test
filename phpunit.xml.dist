@@ -26,6 +26,7 @@
         <env name="DB_PASSWORD" value="root" force="true" />
         <env name="LOCAL_URL" value="to_upload" force="true" />
         <env name="REMOTE_URL" value="transport.productsup.io" force="true" />
+        <env name="GOOGLE_SHEETS_TOKEN_DIR" value="secrets/credentials.json" force="true" />
     </php>
 
     <testsuites>
