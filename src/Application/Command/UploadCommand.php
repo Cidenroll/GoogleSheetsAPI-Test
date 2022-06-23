@@ -84,6 +84,7 @@ class UploadCommand extends Command
                     'error' => $historyAsset->getIdGoogleSpreadSheet(),
                     'code' => '401'
                 ]);
+
             }
         } catch (SheetException $e) {
             $output->writeln(
