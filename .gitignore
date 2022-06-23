@@ -11,3 +11,7 @@
 
 /vendor
 /coverage.html
+./.env
+./.env.test
+secrets/credentials.json
+
