@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- https://phpunit.readthedocs.io/en/latest/configuration.html -->
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+         backupGlobals="false"
+         colors="true"
+         bootstrap="tests/bootstrap.php"
+         convertDeprecationsToExceptions="false"
+>
+    <php>
+        <ini name="display_errors" value="1" />
+        <ini name="error_reporting" value="-1" />
+        <server name="APP_ENV" value="test" force="true" />
+        <server name="SHELL_VERBOSITY" value="-1" />
+        <server name="SYMFONY_PHPUNIT_REMOVE" value="" />
+        <server name="SYMFONY_PHPUNIT_VERSION" value="9.5" />
+        <env name="REMOTE_CRED_USER" value="fake" force="true" />
+        <env name="REMOTE_CRED_PASS" value="fake" force="true" />
+        <env name="REMOTE_DIR" value="fake" force="true" />
+        <env name="REMOTE_URL" value="fake" force="true" />
+        <env name="DB_HOST" value="mysql_db" force="true" />
+        <env name="DB_PORT" value="3306" force="true" />
+        <env name="DB_DATABASE" value="products-up" force="true" />
+        <env name="DB_USERNAME" value="root" force="true" />
+        <env name="DB_PASSWORD" value="root" force="true" />
+        <env name="LOCAL_URL" value="to_upload" force="true" />
+        <env name="REMOTE_URL" value="transport.productsup.io" force="true" />
+    </php>
+
+    <testsuites>
+        <testsuite name="Project Test Suite">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+
+    <coverage processUncoveredFiles="true">
+        <include>
+            <directory suffix=".php">src</directory>
+        </include>
+    </coverage>
+
+    <listeners>
+        <listener class="Symfony\Bridge\PhpUnit\SymfonyTestsListener" />
+    </listeners>
+
+    <!-- Run `composer require symfony/panther` before enabling this extension -->
+    <!--
+    <extensions>
+        <extension class="Symfony\Component\Panther\ServerExtension" />
+    </extensions>
+    -->
+</phpunit>
