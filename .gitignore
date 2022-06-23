@@ -10,3 +10,4 @@
 ###< squizlabs/php_codesniffer ###
 
 /vendor
+/coverage.html
