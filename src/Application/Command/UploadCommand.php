@@ -39,7 +39,7 @@ class UploadCommand extends Command
     {
         $this->setName('gs:upload')
             ->setDescription('Upload document to Google Sheets')
-            ->setHelp('Help message here')
+            ->setHelp('Example command: php application.php -f filename.xml -l local/remote')
             ->setDefinition(
                 new InputDefinition([
                     new InputOption('filename', 'f', InputOption::VALUE_REQUIRED),
@@ -84,7 +84,6 @@ class UploadCommand extends Command
                     'error' => $historyAsset->getIdGoogleSpreadSheet(),
                     'code' => '401'
                 ]);
-
             }
         } catch (SheetException $e) {
             $output->writeln(
