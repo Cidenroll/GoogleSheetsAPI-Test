@@ -38,7 +38,8 @@ Other observations:
             - open/closed = did not use singletons, as they defeat this principle
             - liskov sub = SheetInterface implemented in LocalSheet and RemoteSheet
             - interface segregation = did not over-complicate interfaces
-            - dependency inversion = UploadController calls the needed service once to upload() > this service calls services where needed only, and so on 
+            - dependency inversion = UploadController calls the needed service once to upload() > this service calls services where needed only, and so on\ 
+
 Unit-tests:
     - phpunit tests are available at app/tests
     - also code coverage is available by [bash in pu-php] './vendor/bin/phpunit tests --coverage-html coverage.html/'
