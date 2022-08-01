@@ -28,7 +28,7 @@ class SheetApiConnector implements ConnectorInterface
     public function setConnector(): self
     {
         $this->client = new Client();
-        $this->client->setApplicationName('ProductsUp Test GoogleAPI');
+        $this->client->setApplicationName('Test GoogleAPI');
         $this->client->setScopes($this->scopes);
         $this->client->setAuthConfig($this->authConfig);
         $this->client->setAccessType($this->accessType);
